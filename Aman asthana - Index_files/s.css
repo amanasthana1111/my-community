@@ -1,0 +1,78 @@
+.social {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.socials body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #20002c;
+}
+
+.socials ul {
+    display: flex;
+    list-style-type: none;
+}
+.socials ul li a {
+    display: flex;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 23px;
+    margin-right: 50px;
+    font-size: 60px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.socials ul li a::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 23px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: -1;
+    transition: 0.3s;
+}
+.socials ul li a:hover {
+    transform: rotate(-15deg);
+}
+.socials ul li a:hover::before {
+    transform: rotate(15deg);
+}
+
+.socials ul li a::before {
+    content: " ";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #dc2743;
+    right: -5px;
+    bottom: 0;
+    border-radius: 23px;
+    z-index: -1;
+    transform-origin: 100% 100%;
+      transform: rotate(10deg);
+    transition: 0.3s;
+}
+
+.socials ul li:nth-child(2) a::before {
+    background: #25D366;
+}
+
+.socials ul li:nth-child(3) a::before {
+    background: #1DA1F2;
+}
